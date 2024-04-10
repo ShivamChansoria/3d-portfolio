@@ -7,7 +7,7 @@ import { styles } from "../styles"
 import { Tilt } from "react-tilt"
 import { TangentSpaceNormalMap } from "three"
 
-const ProjectCard = ({ index, name, description, tags, image, source_code, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code, source_code_link, host_link }) => {
   return(
     <motion.div variants={fadeIn("up","spring", index * 0.5, 0.75)}>
       <Tilt options={
@@ -26,7 +26,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code, sourc
           </div>
          </div>
          </div>
-         <div className="mt-8">
+         <div onClick={()=> window.open( host_link, "_blank")} className="mt-8 cursor-pointer">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
          </div>

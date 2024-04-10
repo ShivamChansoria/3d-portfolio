@@ -29,6 +29,10 @@ import gfg from "./company/gfg.png"
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import ecommerce from "./ecommerce.png";
+import amazonclone from "./amazonclone.png";
+import coursesapp from "./coursesapp.png";
+
 
 export {
   logo,
@@ -59,5 +63,8 @@ export {
   carrent,
   jobit,
   tripguide,
-  gfg
+  gfg,
+  coursesapp,
+  ecommerce,
+  amazonclone
 };

@@ -26,7 +26,13 @@ import {
     tripguide,
     threejs,
     gfg,
+     ecommerce,
+    coursesapp,
+    amazonclone
+   
   } from "../assets";
+
+
   
   export const navLinks = [
     {
@@ -130,67 +136,70 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "E-Commerce",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "E-Commerce shopping app helps you select the product from whichever category you want, then add it to the cart and place your order. But you need to logged in for that!!.",
       tags: [
         {
-          name: "react",
+          name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "Firebase",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "SCSS",
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: ecommerce,
+      source_code_link: "https://github.com/ShivamChansoria/e-commerce-web-app",
+      host_link:"https://e-commerce-app-01-f2eae.web.app/",
     },
     {
-      name: "Job IT",
+      name: "Courses App",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "It is the animated web app which is responsive also for mobile screens and lets the user to login/signup and have the product selected which they find to be useful.",
       tags: [
         {
-          name: "react",
+          name: "AppWrite",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "Redux-toolkit",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "Motion-Framer",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: coursesapp,
+      source_code_link: "https://github.com/ShivamChansoria/courses-app",
+      host_link:"https://courses-app-gamma.vercel.app/",
     },
     {
-      name: "Trip Guide",
+      name: "Amazon-Clone",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        " Amazon Clone is a highly responsive e-commerce platform that mirrors the user-friendly design of Amazon. It seamlessly integrates 'Razorpay' for secure and efficient payment processing",
       tags: [
         {
-          name: "nextjs",
+          name: "Firebase Auth",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "Razorpay",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "RestAPI",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: amazonclone,
+      host_link:"https://amazone-clone-1.vercel.app/",
+      source_code_link: "https://github.com/ShivamChansoria/amazon-clone",
     },
   ];
   
