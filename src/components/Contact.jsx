@@ -5,12 +5,13 @@ import { EarthCanvas } from "./canvas"
 import { SectionWrapper } from "../hoc"
 import { slideIn } from "../utils/motion"
 import { styles } from "../styles"
-//template_rw1ar6o
-//service_r5li6oo
-//WXAXlKUCWyKORns5W
+import { emailJS_publicKey, emailJS_serviceID, emailJS_templayeKey } from "../Config"
+
 
 
 const Contact = () => {
+
+
   const fromRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -24,13 +25,17 @@ const Contact = () => {
 
     setForm({ ...form, [name]: value })
   };
+
+  const serviceID= emailJS_serviceID;
+  const publicKey= emailJS_publicKey;
+  const templateKey= emailJS_templayeKey;
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
     emailjs.send(
-      "service_r5li6oo", 
-      "template_rw1ar6o",
+      serviceID, 
+      templateKey,
       {
         from_name: form.name,
         to_name: "Shivam",
@@ -38,7 +43,7 @@ const Contact = () => {
         to_email: "chansoriyashivam@gmail.com",
         message: form.message,
       },
-      "WXAXlKUCWyKORns5W" ) .then(() => {
+      publicKey ) .then(() => {
         setLoading(false);
         alert("Thank you. I will get back to you soon as soon as possible.")
       });
@@ -83,7 +88,7 @@ const Contact = () => {
             <span className="text-white font-medium mb-4">
               Your Message
             </span>
-            <textarea rows="6"type="text" name="name" value={form.name} onChange={handleChange} placeholder="Your Message !!"  
+            <textarea rows="6"type="text" name="message" value={form.message} onChange={handleChange} placeholder="Your Message !!"  
             className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"/>
           </label>
           <button type="submit" className=" bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl" >
